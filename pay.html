@@ -1,0 +1,217 @@
+<html>
+<head>
+	<title>Payment</title>
+<link rel="stylesheet" href="css/linearicons.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/nice-select.css">					
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">			
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/main.css">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+.sidenav {
+    height: 655px;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(40,57,101,.9);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+}
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+.active {
+    background-color: green;
+    color: white;
+}
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+dd { margin-left: 75px; }
+    
+#mode_margin { margin-left: 0px; }
+</style>
+</head>
+<body>
+	<header id="header" id="home">
+	<div class="container">
+	<div class="row align-items-center justify-content-between d-flex">
+	<div id="logo">
+		<a href="index.html"><img src="logo.jpg" height="80" width="150"></a>
+	</div>
+	<nav id="nav-menu-container">
+	<ul class="nav-menu">
+			
+		<li><a href="index.html">	
+					<div class="group">
+						<input type="submit" class="button" value="Logout">
+					</div></a>
+				</li>		
+	</ul>
+	</nav>
+	</div>
+	</header>
+	<div class="sidenav"><br><br><br><br>
+	<ul>
+  		<li><a href="profile.html">Profile</a></li>
+  		
+  		<li><a href="payment.html">Payment</a></li>
+  		<li><a href="booking.html">Booking</a></li>
+  		<li><a href="feedback.html">Feedback</a></li>
+  		<li><a href="prebooking.html">Previous Booking</a></li>
+	</ul>
+	</div>
+
+	<section class="banner-area relative" id="home">
+	<div class="overlay overlay-bg"></div>	
+	<div class="container">
+	<div class="row fullscreen d-flex align-items-center justify-content-center">
+	<div class="col-lg-5  col-md-6 header-right">
+	<h4 class="text-white pb-30"><center>Payment</center></h4>
+	<form class="form"  autocomplete="off" action="payment.jsp">
+	<div class="form-group">
+								    
+		<div class="from-group">
+			
+			<input class="form-control txt-field" type="text" name="email" placeholder="Booking ID">
+			<input class="form-control txt-field" type="text" name="phone" placeholder="Total amount">
+		</div>
+		<h4 class="text-white pb-30"><center>Card Details</center></h4>
+		<div class="from-group">
+                         <input class="form-control txt-field" type="text" name="name" placeholder="Your name">
+			<input class="form-control txt-field" type="text" name="name" placeholder="Card Number">       
+        	<dt style="color:white">Expiry Date</dt>
+        	<dd>
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><select id="cc_exp_mm" name="cc_exp_mm">
+                            <option value="">Month</option>
+                            <option value="1" selected="selected">January</option>                                
+                            <option value="2">February</option>                             
+                            <option value="3">March</option>                          
+                            <option value="4">April</option>                          
+                            <option value="5">May</option>                           
+                            <option value="6">June</option>                           
+                            <option value="7">July</option>                          
+                            <option value="8">August</option>                            
+                            <option value="9">September</option>                    
+                            <option value="10">October</option>                             
+                            <option value="11">November</option>                            
+                            <option value="12">December</option>                            
+                        </select></td>                        
+                    <td width="20">&nbsp;</td>                        
+                    <td><select id="cc_exp_yyyy" name="cc_exp_yyyy">
+					<option value="">Month</option>
+                            <option value="2016" selected="selected">2016</option>                                
+                            <option value="2017">2017</option>                             
+                            <option value="2018">2018</option>                          
+                            <option value="2019">2019</option>                          
+                            <option value="2020">2020</option>                           
+                            <option value="2021">2021</option>                           
+                            <option value="2022">2022</option>                          
+                            <option value="2023">2023</option>                            
+                            <option value="2024">2024</option>                    
+                            <option value="2025">2025</option>                             
+                            <option value="2026">2026</option>                            
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>                            
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>                        
+                    </td>                    
+                </tr>                
+            </table>            
+        	</dd><br>
+			<input class="form-control txt-field" type="tel" name="phone" placeholder="CVV">
+		</div>
+		<div class="form-group row">
+			<div class="col-md-12">
+				<button type="reset" class="btn btn-default btn-lg btn-block text-center text-uppercase">Confirm Payment</button>
+			</div>
+		</div>
+		</form>
+	</div>											
+	</div>
+	</div>					
+	</section>
+
+	
+				
+
+			
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+			
+<script src="js/vendor/bootstrap.min.js"></script>			
+			
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+			
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>			
+  			
+<script src="js/easing.min.js"></script>			
+			
+<script src="js/hoverIntent.js"></script>
+			
+<script src="js/superfish.min.js"></script>	
+			
+<script src="js/jquery.ajaxchimp.min.js"></script>
+			
+<script src="js/jquery.magnific-popup.min.js"></script>	
+			
+<script src="js/owl.carousel.min.js"></script>			
+			
+<script src="js/jquery.sticky.js"></script>
+			
+<script src="js/jquery.nice-select.min.js"></script>	
+			
+<script src="js/waypoints.min.js"></script>
+			
+<script src="js/jquery.counterup.min.js"></script>					
+			
+<script src="js/parallax.min.js"></script>		
+			
+<script src="js/mail-script.js"></script>	
+			
+<script src="js/main.js"></script>	
+		
+
+</body>
+</html>
